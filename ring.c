@@ -25,7 +25,8 @@ load_files(){
 	fclose(fp);
 }
 
-void socket_thread(int client_sock){
+void
+socket_thread(int client_sock){
 	unsigned n = time(NULL)/60;
 	srand(n);
 
@@ -57,7 +58,7 @@ main(int argc, char *argv[]){
 	// Prepare sockaddr_in struct
 	server.sin_family = AF_INET;
 	server.sin_addr.s_addr = INADDR_ANY;
-	server.sin_port = htons(79);
+	server.sin_port = htons(8079);
 
 	// Bind
 	if(bind(socket_desc, (struct sockaddr *)&server, sizeof(server))<0){
