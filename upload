@@ -1,0 +1,5 @@
+#!/bin/sh
+make clean
+make
+rsync header list ring root@s2:/home/ring/
+ssh root@s2 'rc-service ring restart'
