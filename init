@@ -1,0 +1,11 @@
+#!/sbin/openrc-run
+
+command="/home/ring/ring"
+command_user="ring"
+directory="/home/ring"
+pidfile="/var/run/$SVCNAME.pid"
+command_background="yes"
+
+depend() {
+        need net
+}
