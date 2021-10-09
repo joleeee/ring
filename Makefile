@@ -1,5 +1,5 @@
 ring: ring.c
-	gcc ring.c -o ring
+	musl-gcc -static ring.c -o ring
 
 clean:
 	rm ring || true
